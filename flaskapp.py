@@ -1,6 +1,4 @@
 from flask import Flask, request
-from text_similarity import RatingGenerator
-import text_parser
 app = Flask(__name__)
 
 @app.route('/', methods=['GET'])

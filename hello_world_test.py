@@ -5,3 +5,4 @@ from hello_world import HelloWorld
 def test_hello():
     HW = HelloWorld()
     assert HW.print_hello()=="Hello World"
+test_hello()
