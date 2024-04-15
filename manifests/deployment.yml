@@ -1,0 +1,24 @@
+# k3d image import derp:latest -c derp 
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-flask-app
+  labels:
+    app: my-flask-app
+spec:
+  replicas: 3  # Adjust as needed for scaling
+  selector:
+    matchLabels:
+      app: my-flask-app
+  template:
+    metadata:
+      labels:
+        app: my-flask-app
+    spec:
+      containers:
+      - name: flask-app-container
+        image: derp:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 5000
