@@ -1,0 +1,10 @@
+# Default values for hello-app.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 3
+labels: 
+  rebecca
+
+image:
+  repository: hello
