@@ -3,22 +3,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-flask-app
+  name: my2-flask-app
   labels:
-    app: {{ values.labels }}
+    app: {{ .Values.labels }}
 spec:
-  replicas:  {{ values.replicaCount }}
+  replicas:  {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ values.labels }}
+      app: {{ .Values.labels }}
   template:
     metadata:
       labels:
-        app: {{ values.labels }}
+        app: {{ .Values.labels }}
     spec:
       containers:
       - name: flask-app-container
-        image: {{ values.image.repository}}:latest
+        image: {{ .Values.image.repository}}:latest
         imagePullPolicy: Never
         ports:
         - containerPort: 5000

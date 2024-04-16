@@ -1,3 +1,19 @@
+# Post class demo instructions:
+
+It was definately the ```{{ .Values.<config>}}!
+
+Good job spotting that!
+
+I updated the service and deployment yaml files in the helm template directory and I was able to get the helm chart deployed.
+
+You can deploy the local helm chart (after following the directions below for minikube to use local images) with this command.
+
+```bash
+helm install -f alok-values.yaml release-name hello-app
+```
+
+---
+
 * Task 1:  Build a Dockerfile to create an image for this app.  
   * You'll need to:
     * Start from the python:3.8.3 base image 
