@@ -1,6 +1,6 @@
 # Post class demo instructions:
 
-It was definately the ```{{ .Values.<config>}}!
+It was definately the ```{{ .Values.<config>}}!```
 
 Good job spotting that!
 
